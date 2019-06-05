@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title><%=title%></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+         <style>
+            input{
+                margin-bottom: 10px
+            }
+        </style>
+    </head>
+    <body align="middle">
+    <% if (data!=null) { %>
+        <h1>Welcome, <%=data.name%></h1>
+       <p><%=data.name%>, <%=message%></p>
+
+        <a href="/second_page">second page</a>
+        <a href="/logout">logout</a>
+        <% } else { %>
+        <h1>hello please login</h1>
+         <a href="/login">login</a>
+         <a href="/registration">registration</a>
+         <%}%>
+         
+    </body>
+</html>

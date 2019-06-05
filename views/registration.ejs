@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title><%=title%></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+            input{
+                margin-bottom: 10px
+            }
+        </style>
+    </head>
+    <body align="middle">
+        <form method="POST" action="">
+            <%=error_message%><br>
+            <input type="text" required="required" minlength="3" maxlength="15" placeholder="Name" name="name" id="name"><br> 
+            <input type="email" name="email" id="email" required placeholder="Email" minlength="5" maxlength="20"><br>
+            <input type="tel" name="tel" id="tel" required placeholder="Telephone No" minlength="8" maxlength="12"><br>
+            <input type="password" name="password" id="password" required placeholder="Password" minlength="8" maxlength="20"><br>
+            <input type="password" name="confirm_password" id="confirm_password" required placeholder="Confirm Password" maxlength="20"><br>
+            <button type="submit">Register</button>
+        </form>
+    </body>
+</html>

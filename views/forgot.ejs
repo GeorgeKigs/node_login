@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%=title%></title>
+    <style>
+        button,input{
+            margin-bottom: 10px
+        }
+    </style>
+
+</head>
+<body align="middle">
+    <div id="send_code">
+        <p>Enter your Email or Telephone Number to receive a verification code.</p>
+        <form action="" method="POST">
+            <input type="text" name="email_tel" id="email_tel" required maxlength="20" placeholder="Email or Telephone" width="100px"><br>
+            <button type="submit">Send Code</button>
+        </form>
+    </div>
+    <div>
+        <form action="" method="post">
+            <input type="number" name="verification_number" id="verification_number" maxlength="8" placeholder="code" required><br>
+            <button type="submit">Verify</button>
+        </form>
+    </div>
+    
+</body>
+</html>
