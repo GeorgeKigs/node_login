@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title><%=title%></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+         <style>
+           form{
+                margin:10px 300px;
+                background-color:aqua;
+                width:400px;
+                height:500px:
+                cursor:pointer;
+            }
+            input{
+                padding:12px;
+                margin-top: 5px;
+                border-radius:8px;
+                cursor:pointer;
+            }
+            input:hover{
+                background-color: solid pink;
+                cursor:pointer;
+            }
+            button{
+                font-size:24px;
+                padding:12px;
+                background-color: green; 
+                cursor:pointer;
+                border-radius:8px;
+            }
+            button:hover{
+               background-color: yellow ;  
+            }
+            body{
+                background-color:grey;
+            }
+            input{
+                margin-bottom: 10px
+            }
+        </style>
+    </head>
+    <body align="middle">
+        <%=message%>
+        <form method="post" action="">
+            <input type="email" name="email" value="" placeholder="Email: " required="required" maxlength="30" autocomplete="off"><br>
+            <input type="password" name="password" value="" placeholder="Password: " required="required" maxlength="20" autocomplete="off"><br>
+            <button type="submit">Login</button>
+        </form>
+        <a href="/forgot">Forgot Password</a>
+        <a href="/registration">Registration</a>
+    
+    </body>
+</html>

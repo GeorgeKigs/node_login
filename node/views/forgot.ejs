@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%=title%></title>
+    <style>
+      form{
+                margin:10px 300px;
+                background-color:aqua;
+                width:400px;
+                height:500px:
+                cursor:pointer;
+            }
+            input{
+                padding:12px;
+                margin-top: 5px;
+                border-radius:8px;
+                cursor:pointer;
+            }
+            input:hover{
+                background-color: solid pink;
+                cursor:pointer;
+            }
+            button{
+                font-size:24px;
+                padding:12px;
+                background-color: green; 
+                cursor:pointer;
+                border-radius:8px;
+            }
+            button:hover{
+               background-color: yellow ;  
+            }
+            body{
+                background-color:grey;
+            }
+            input{
+                margin-bottom: 10px;
+            }
+            .message{
+                margin-top:10px;
+                font-size: 17px;
+                background-color:white;
+                font-family:serif;
+                border-radius:10px;
+            }
+    </style>
+
+</head>
+<body align="middle">
+<!--if the title is forgot password all you have to do is enter your email so no value is required-->
+    <% if (title=='Forgot Password') { %>
+        <div id="send_code">
+        <p>Enter your Email to receive a verification code.</p>
+        <form action="/resend" method="POST">
+            <input type="text" name="email" id="email" required maxlength="30" placeholder="Email" width="100px"><br>
+            
+            <button type="submit">Send Code</button><br>
+            <a href='/registration'>registration</a>
+
+        </form>
+    </div>
+    <% } else if (title=='verification'){%>
+
+    
+    <div>
+    <!--if the you want a verification_code enter your email then a verification is sent-->
+        <form action="/verification" method="post">
+            <span class="message"><%=message%></span>
+            <input type="hidden" name="email" value=<%=data.email%> placeholder="email" >
+            <!--addition of a time module that counts down after 1 min then activates the resend link.--> 
+            <p>the time remaining is :</p>
+            <input type="text" name="verification_code" id="verification_code" maxlength="8" placeholder="code" required><br>
+            <button type="submit">Verify</button> 
+            <a href="/forgot">resend</a>
+        </form>
+    </div>
+    <%}%>
+</body>
+</html>

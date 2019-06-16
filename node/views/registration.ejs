@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title><%=title%></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+            form{
+                margin:1px 300px;
+                background-color:aqua;
+                width:400px;
+                height:500px:
+                cursor:pointer;
+            }
+            input{
+                padding:12px;
+                margin-bottom: 5px;
+                border-radius:8px;
+                cursor:pointer;
+            }
+            input:hover{
+                background-color:pink;
+                cursor:pointer;
+            }
+            button{
+                font-size:24px;
+                padding:12px;
+                background-color: green; 
+                cursor:pointer;
+                border-radius:8px;
+            }
+            button:hover{
+               background-color: yellow;  
+            }
+            body{
+                background-color:grey;
+            }
+        </style>
+    </head>
+    <body align="middle">
+     <div class="form">
+        <form method="POST" action="">
+            <%=error_message%><br>
+            <input type="text" required="required" minlength="3" maxlength="15" placeholder="Name" name="name" id="name"><br> 
+            <input type="email" name="email" id="email" required placeholder="Email" minlength="5" maxlength="30"><br>
+            <input type="tel" name="tel" id="tel" required placeholder="Telephone No" minlength="8" maxlength="12"><br>
+            <input type="password" name="password" id="password" required placeholder="Password" minlength="8" maxlength="20"><br>
+            <input type="password" name="confirm_password" id="confirm_password" required placeholder="Confirm Password" maxlength="20"><br>
+            <button type="submit">Register</button>
+        </form>
+    <div>
+    </body>
+</html>
