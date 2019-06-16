@@ -22,6 +22,16 @@
         password:{
             type:String,
             required:true,
+        },
+        verified:{
+            type:Boolean,
+            required:true,
+            default:false
+        },
+        loggedIn:{
+            type:Boolean,
+            required:true,
+            default:false
         }
 
     },
@@ -29,7 +39,7 @@
         collection:'Users'
     });
 
-
+   
 
 
 const model = module.exports = mongoose.model('Users',appUsersModel);

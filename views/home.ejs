@@ -17,7 +17,11 @@
        <p><%=data.name%>, <%=message%></p>
 
         <a href="/second_page">second page</a>
-        <a href="/logout">logout</a>
+        <form action="/logout">
+         <input type="hidden" name="email" value="<%=data.email%>">
+         <button type="submit">Logout</button>
+        </form>
+        
         <% } else { %>
         <h1>hello please login</h1>
          <a href="/login">login</a>

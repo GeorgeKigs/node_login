@@ -41,7 +41,9 @@ app.use(session({
 // })
 
 //passport requirements
-
+require('./config/config')(passport);
+app.use(passport.initialize());
+app.use(passport.session());
 //exporting the details to the controller and the models
 routes(app,body_parser,bcrypt,models);
 models(mongoose);
