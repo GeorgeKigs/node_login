@@ -157,8 +157,8 @@
             service:'Gmail',                         
             auth:{
                                         
-                user:'jkymathy@gmail.com',
-                pass:'thuranira810.',
+                user:'email',
+                pass:'pass',
                                         
                 }});
     // var transporter = nodemailer.createTransport('smtps://user%40gmail.com:pass@smtp.gmail.com');
